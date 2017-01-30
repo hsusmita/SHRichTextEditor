@@ -1,0 +1,537 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		78617C321E3F434A00CEC368 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78617C311E3F434A00CEC368 /* AppDelegate.swift */; };
+		78617C341E3F434A00CEC368 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78617C331E3F434A00CEC368 /* ViewController.swift */; };
+		78617C371E3F434A00CEC368 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 78617C351E3F434A00CEC368 /* Main.storyboard */; };
+		78617C391E3F434A00CEC368 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 78617C381E3F434A00CEC368 /* Assets.xcassets */; };
+		78617C3C1E3F434A00CEC368 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 78617C3A1E3F434A00CEC368 /* LaunchScreen.storyboard */; };
+		78617C471E3F434B00CEC368 /* SHRichTextEditorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78617C461E3F434B00CEC368 /* SHRichTextEditorTests.swift */; };
+		78617C521E3F434B00CEC368 /* SHRichTextEditorUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78617C511E3F434B00CEC368 /* SHRichTextEditorUITests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		78617C431E3F434B00CEC368 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 78617C261E3F434A00CEC368 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 78617C2D1E3F434A00CEC368;
+			remoteInfo = SHRichTextEditor;
+		};
+		78617C4E1E3F434B00CEC368 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 78617C261E3F434A00CEC368 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 78617C2D1E3F434A00CEC368;
+			remoteInfo = SHRichTextEditor;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		78617C2E1E3F434A00CEC368 /* SHRichTextEditor.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SHRichTextEditor.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		78617C311E3F434A00CEC368 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		78617C331E3F434A00CEC368 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		78617C361E3F434A00CEC368 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		78617C381E3F434A00CEC368 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		78617C3B1E3F434A00CEC368 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		78617C3D1E3F434A00CEC368 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		78617C421E3F434B00CEC368 /* SHRichTextEditorTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SHRichTextEditorTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		78617C461E3F434B00CEC368 /* SHRichTextEditorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SHRichTextEditorTests.swift; sourceTree = "<group>"; };
+		78617C481E3F434B00CEC368 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		78617C4D1E3F434B00CEC368 /* SHRichTextEditorUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SHRichTextEditorUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		78617C511E3F434B00CEC368 /* SHRichTextEditorUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SHRichTextEditorUITests.swift; sourceTree = "<group>"; };
+		78617C531E3F434B00CEC368 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		78617C2B1E3F434A00CEC368 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		78617C3F1E3F434B00CEC368 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		78617C4A1E3F434B00CEC368 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		78617C251E3F434A00CEC368 = {
+			isa = PBXGroup;
+			children = (
+				78617C301E3F434A00CEC368 /* SHRichTextEditor */,
+				78617C451E3F434B00CEC368 /* SHRichTextEditorTests */,
+				78617C501E3F434B00CEC368 /* SHRichTextEditorUITests */,
+				78617C2F1E3F434A00CEC368 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		78617C2F1E3F434A00CEC368 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				78617C2E1E3F434A00CEC368 /* SHRichTextEditor.app */,
+				78617C421E3F434B00CEC368 /* SHRichTextEditorTests.xctest */,
+				78617C4D1E3F434B00CEC368 /* SHRichTextEditorUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		78617C301E3F434A00CEC368 /* SHRichTextEditor */ = {
+			isa = PBXGroup;
+			children = (
+				78617C311E3F434A00CEC368 /* AppDelegate.swift */,
+				78617C331E3F434A00CEC368 /* ViewController.swift */,
+				78617C351E3F434A00CEC368 /* Main.storyboard */,
+				78617C381E3F434A00CEC368 /* Assets.xcassets */,
+				78617C3A1E3F434A00CEC368 /* LaunchScreen.storyboard */,
+				78617C3D1E3F434A00CEC368 /* Info.plist */,
+			);
+			path = SHRichTextEditor;
+			sourceTree = "<group>";
+		};
+		78617C451E3F434B00CEC368 /* SHRichTextEditorTests */ = {
+			isa = PBXGroup;
+			children = (
+				78617C461E3F434B00CEC368 /* SHRichTextEditorTests.swift */,
+				78617C481E3F434B00CEC368 /* Info.plist */,
+			);
+			path = SHRichTextEditorTests;
+			sourceTree = "<group>";
+		};
+		78617C501E3F434B00CEC368 /* SHRichTextEditorUITests */ = {
+			isa = PBXGroup;
+			children = (
+				78617C511E3F434B00CEC368 /* SHRichTextEditorUITests.swift */,
+				78617C531E3F434B00CEC368 /* Info.plist */,
+			);
+			path = SHRichTextEditorUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		78617C2D1E3F434A00CEC368 /* SHRichTextEditor */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 78617C561E3F434B00CEC368 /* Build configuration list for PBXNativeTarget "SHRichTextEditor" */;
+			buildPhases = (
+				78617C2A1E3F434A00CEC368 /* Sources */,
+				78617C2B1E3F434A00CEC368 /* Frameworks */,
+				78617C2C1E3F434A00CEC368 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = SHRichTextEditor;
+			productName = SHRichTextEditor;
+			productReference = 78617C2E1E3F434A00CEC368 /* SHRichTextEditor.app */;
+			productType = "com.apple.product-type.application";
+		};
+		78617C411E3F434B00CEC368 /* SHRichTextEditorTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 78617C591E3F434B00CEC368 /* Build configuration list for PBXNativeTarget "SHRichTextEditorTests" */;
+			buildPhases = (
+				78617C3E1E3F434B00CEC368 /* Sources */,
+				78617C3F1E3F434B00CEC368 /* Frameworks */,
+				78617C401E3F434B00CEC368 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				78617C441E3F434B00CEC368 /* PBXTargetDependency */,
+			);
+			name = SHRichTextEditorTests;
+			productName = SHRichTextEditorTests;
+			productReference = 78617C421E3F434B00CEC368 /* SHRichTextEditorTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		78617C4C1E3F434B00CEC368 /* SHRichTextEditorUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 78617C5C1E3F434B00CEC368 /* Build configuration list for PBXNativeTarget "SHRichTextEditorUITests" */;
+			buildPhases = (
+				78617C491E3F434B00CEC368 /* Sources */,
+				78617C4A1E3F434B00CEC368 /* Frameworks */,
+				78617C4B1E3F434B00CEC368 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				78617C4F1E3F434B00CEC368 /* PBXTargetDependency */,
+			);
+			name = SHRichTextEditorUITests;
+			productName = SHRichTextEditorUITests;
+			productReference = 78617C4D1E3F434B00CEC368 /* SHRichTextEditorUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		78617C261E3F434A00CEC368 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0820;
+				LastUpgradeCheck = 0820;
+				ORGANIZATIONNAME = hsusmita;
+				TargetAttributes = {
+					78617C2D1E3F434A00CEC368 = {
+						CreatedOnToolsVersion = 8.2.1;
+						DevelopmentTeam = HP3Q6K3LF3;
+						ProvisioningStyle = Automatic;
+					};
+					78617C411E3F434B00CEC368 = {
+						CreatedOnToolsVersion = 8.2.1;
+						DevelopmentTeam = HP3Q6K3LF3;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 78617C2D1E3F434A00CEC368;
+					};
+					78617C4C1E3F434B00CEC368 = {
+						CreatedOnToolsVersion = 8.2.1;
+						DevelopmentTeam = HP3Q6K3LF3;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 78617C2D1E3F434A00CEC368;
+					};
+				};
+			};
+			buildConfigurationList = 78617C291E3F434A00CEC368 /* Build configuration list for PBXProject "SHRichTextEditor" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 78617C251E3F434A00CEC368;
+			productRefGroup = 78617C2F1E3F434A00CEC368 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				78617C2D1E3F434A00CEC368 /* SHRichTextEditor */,
+				78617C411E3F434B00CEC368 /* SHRichTextEditorTests */,
+				78617C4C1E3F434B00CEC368 /* SHRichTextEditorUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		78617C2C1E3F434A00CEC368 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				78617C3C1E3F434A00CEC368 /* LaunchScreen.storyboard in Resources */,
+				78617C391E3F434A00CEC368 /* Assets.xcassets in Resources */,
+				78617C371E3F434A00CEC368 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		78617C401E3F434B00CEC368 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		78617C4B1E3F434B00CEC368 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		78617C2A1E3F434A00CEC368 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				78617C341E3F434A00CEC368 /* ViewController.swift in Sources */,
+				78617C321E3F434A00CEC368 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		78617C3E1E3F434B00CEC368 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				78617C471E3F434B00CEC368 /* SHRichTextEditorTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		78617C491E3F434B00CEC368 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				78617C521E3F434B00CEC368 /* SHRichTextEditorUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		78617C441E3F434B00CEC368 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 78617C2D1E3F434A00CEC368 /* SHRichTextEditor */;
+			targetProxy = 78617C431E3F434B00CEC368 /* PBXContainerItemProxy */;
+		};
+		78617C4F1E3F434B00CEC368 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 78617C2D1E3F434A00CEC368 /* SHRichTextEditor */;
+			targetProxy = 78617C4E1E3F434B00CEC368 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		78617C351E3F434A00CEC368 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				78617C361E3F434A00CEC368 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		78617C3A1E3F434A00CEC368 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				78617C3B1E3F434A00CEC368 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		78617C541E3F434B00CEC368 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		78617C551E3F434B00CEC368 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		78617C571E3F434B00CEC368 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = HP3Q6K3LF3;
+				INFOPLIST_FILE = SHRichTextEditor/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.hsusmita.SHRichTextEditor;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		78617C581E3F434B00CEC368 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = HP3Q6K3LF3;
+				INFOPLIST_FILE = SHRichTextEditor/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.hsusmita.SHRichTextEditor;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
+		78617C5A1E3F434B00CEC368 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				DEVELOPMENT_TEAM = HP3Q6K3LF3;
+				INFOPLIST_FILE = SHRichTextEditorTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.hsusmita.SHRichTextEditorTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SHRichTextEditor.app/SHRichTextEditor";
+			};
+			name = Debug;
+		};
+		78617C5B1E3F434B00CEC368 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				DEVELOPMENT_TEAM = HP3Q6K3LF3;
+				INFOPLIST_FILE = SHRichTextEditorTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.hsusmita.SHRichTextEditorTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SHRichTextEditor.app/SHRichTextEditor";
+			};
+			name = Release;
+		};
+		78617C5D1E3F434B00CEC368 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				DEVELOPMENT_TEAM = HP3Q6K3LF3;
+				INFOPLIST_FILE = SHRichTextEditorUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.hsusmita.SHRichTextEditorUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_TARGET_NAME = SHRichTextEditor;
+			};
+			name = Debug;
+		};
+		78617C5E1E3F434B00CEC368 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				DEVELOPMENT_TEAM = HP3Q6K3LF3;
+				INFOPLIST_FILE = SHRichTextEditorUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.hsusmita.SHRichTextEditorUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_TARGET_NAME = SHRichTextEditor;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		78617C291E3F434A00CEC368 /* Build configuration list for PBXProject "SHRichTextEditor" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				78617C541E3F434B00CEC368 /* Debug */,
+				78617C551E3F434B00CEC368 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		78617C561E3F434B00CEC368 /* Build configuration list for PBXNativeTarget "SHRichTextEditor" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				78617C571E3F434B00CEC368 /* Debug */,
+				78617C581E3F434B00CEC368 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		78617C591E3F434B00CEC368 /* Build configuration list for PBXNativeTarget "SHRichTextEditorTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				78617C5A1E3F434B00CEC368 /* Debug */,
+				78617C5B1E3F434B00CEC368 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		78617C5C1E3F434B00CEC368 /* Build configuration list for PBXNativeTarget "SHRichTextEditorUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				78617C5D1E3F434B00CEC368 /* Debug */,
+				78617C5E1E3F434B00CEC368 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 78617C261E3F434A00CEC368 /* Project object */;
+}
