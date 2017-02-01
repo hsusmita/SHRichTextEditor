@@ -10,16 +10,27 @@ import UIKit
 
 class ViewController: UIViewController {
 
+	@IBOutlet weak var textView: UITextView!
+	@IBOutlet var toolbar: UIToolbar!
+	var textEditor: SHRichTextEditor?
+
 	override func viewDidLoad() {
 		super.viewDidLoad()
-		// Do any additional setup after loading the view, typically from a nib.
+		textEditor = SHRichTextEditor(textView: textView)
 	}
 
-	override func didReceiveMemoryWarning() {
-		super.didReceiveMemoryWarning()
-		// Dispose of any resources that can be recreated.
+	@IBAction func handleIndentButtonTapped(_ sender: Any) {
+		let selectedRange = textView.selectedRange
+		textView.addIndentation(at: selectedRange.location)
 	}
 
+	@IBAction func handleImageButtonTapped(_ sender: Any) {
+		let selectedRange = textView.selectedRange
+		textView.insertImage(at: selectedRange.location)
+	}
 
+	@IBAction func handleLinkButtonTapped(_ sender: Any) {
+		let selectedRange = textView.selectedRange
+		textView.addLink(for: selectedRange)
+	}	
 }
-

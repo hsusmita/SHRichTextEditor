@@ -14,6 +14,23 @@
 		78617C3C1E3F434A00CEC368 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 78617C3A1E3F434A00CEC368 /* LaunchScreen.storyboard */; };
 		78617C471E3F434B00CEC368 /* SHRichTextEditorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78617C461E3F434B00CEC368 /* SHRichTextEditorTests.swift */; };
 		78617C521E3F434B00CEC368 /* SHRichTextEditorUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78617C511E3F434B00CEC368 /* SHRichTextEditorUITests.swift */; };
+		78617C601E3F44D800CEC368 /* SHRichTextEditor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78617C5F1E3F44D800CEC368 /* SHRichTextEditor.swift */; };
+		78617C631E3F46B100CEC368 /* ToolbarItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78617C621E3F46B100CEC368 /* ToolbarItem.swift */; };
+		78617C651E3F4BD100CEC368 /* NSAttributedString+Helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78617C641E3F4BD100CEC368 /* NSAttributedString+Helper.swift */; };
+		78DBEAAA1E408EA600F26A31 /* UITextView+IndentationHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78DBEAA91E408EA600F26A31 /* UITextView+IndentationHelper.swift */; };
+		78DBEAAC1E4091BB00F26A31 /* UITextView+ImageHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78DBEAAB1E4091BB00F26A31 /* UITextView+ImageHelper.swift */; };
+		78DBEAAE1E409A8C00F26A31 /* UITextView+LinkHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78DBEAAD1E409A8C00F26A31 /* UITextView+LinkHelper.swift */; };
+		78DBEAB31E41BE7800F26A31 /* RichTextToolbar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78DBEAB11E41BE7800F26A31 /* RichTextToolbar.swift */; };
+		78DBEAB41E41BE7800F26A31 /* RichTextToolbar.xib in Resources */ = {isa = PBXBuildFile; fileRef = 78DBEAB21E41BE7800F26A31 /* RichTextToolbar.xib */; };
+		78DBEAB61E41C0F900F26A31 /* UIFont+SymbolicTraits.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78DBEAB51E41C0F900F26A31 /* UIFont+SymbolicTraits.swift */; };
+		78DBEABA1E41C63E00F26A31 /* ImageBorderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78DBEAB81E41C63E00F26A31 /* ImageBorderView.swift */; };
+		78DBEABB1E41C63E00F26A31 /* ImageBorderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 78DBEAB91E41C63E00F26A31 /* ImageBorderView.xib */; };
+		78DBEABF1E41C98600F26A31 /* CameraInputView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78DBEABD1E41C98600F26A31 /* CameraInputView.swift */; };
+		78DBEAC01E41C98600F26A31 /* CameraInputView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 78DBEABE1E41C98600F26A31 /* CameraInputView.xib */; };
+		78DBEAC41E41C9C100F26A31 /* ImagePickerManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78DBEAC11E41C9C100F26A31 /* ImagePickerManager.swift */; };
+		78DBEAC51E41C9C100F26A31 /* OverlayView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78DBEAC21E41C9C100F26A31 /* OverlayView.swift */; };
+		78DBEAC61E41C9C100F26A31 /* OverlayView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 78DBEAC31E41C9C100F26A31 /* OverlayView.xib */; };
+		78DBEAC81E41CBA300F26A31 /* UIViewController+Helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78DBEAC71E41CBA300F26A31 /* UIViewController+Helper.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +64,23 @@
 		78617C4D1E3F434B00CEC368 /* SHRichTextEditorUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SHRichTextEditorUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		78617C511E3F434B00CEC368 /* SHRichTextEditorUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SHRichTextEditorUITests.swift; sourceTree = "<group>"; };
 		78617C531E3F434B00CEC368 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		78617C5F1E3F44D800CEC368 /* SHRichTextEditor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SHRichTextEditor.swift; path = Source/SHRichTextEditor.swift; sourceTree = "<group>"; };
+		78617C621E3F46B100CEC368 /* ToolbarItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ToolbarItem.swift; path = Source/ToolbarItem.swift; sourceTree = "<group>"; };
+		78617C641E3F4BD100CEC368 /* NSAttributedString+Helper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "NSAttributedString+Helper.swift"; path = "Source/NSAttributedString+Helper.swift"; sourceTree = "<group>"; };
+		78DBEAA91E408EA600F26A31 /* UITextView+IndentationHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "UITextView+IndentationHelper.swift"; path = "Source/UITextView+IndentationHelper.swift"; sourceTree = "<group>"; };
+		78DBEAAB1E4091BB00F26A31 /* UITextView+ImageHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "UITextView+ImageHelper.swift"; path = "Source/UITextView+ImageHelper.swift"; sourceTree = "<group>"; };
+		78DBEAAD1E409A8C00F26A31 /* UITextView+LinkHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "UITextView+LinkHelper.swift"; path = "Source/UITextView+LinkHelper.swift"; sourceTree = "<group>"; };
+		78DBEAB11E41BE7800F26A31 /* RichTextToolbar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RichTextToolbar.swift; path = Source/RichTextToolbar.swift; sourceTree = "<group>"; };
+		78DBEAB21E41BE7800F26A31 /* RichTextToolbar.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = RichTextToolbar.xib; path = Source/RichTextToolbar.xib; sourceTree = "<group>"; };
+		78DBEAB51E41C0F900F26A31 /* UIFont+SymbolicTraits.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "UIFont+SymbolicTraits.swift"; path = "Source/UIFont+SymbolicTraits.swift"; sourceTree = "<group>"; };
+		78DBEAB81E41C63E00F26A31 /* ImageBorderView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ImageBorderView.swift; path = Source/ImageBorderView.swift; sourceTree = "<group>"; };
+		78DBEAB91E41C63E00F26A31 /* ImageBorderView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = ImageBorderView.xib; path = Source/ImageBorderView.xib; sourceTree = "<group>"; };
+		78DBEABD1E41C98600F26A31 /* CameraInputView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CameraInputView.swift; path = Source/CameraInputView.swift; sourceTree = "<group>"; };
+		78DBEABE1E41C98600F26A31 /* CameraInputView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = CameraInputView.xib; path = Source/CameraInputView.xib; sourceTree = "<group>"; };
+		78DBEAC11E41C9C100F26A31 /* ImagePickerManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ImagePickerManager.swift; path = Source/ImagePickerManager/ImagePickerManager.swift; sourceTree = "<group>"; };
+		78DBEAC21E41C9C100F26A31 /* OverlayView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = OverlayView.swift; path = Source/ImagePickerManager/OverlayView.swift; sourceTree = "<group>"; };
+		78DBEAC31E41C9C100F26A31 /* OverlayView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = OverlayView.xib; path = Source/ImagePickerManager/OverlayView.xib; sourceTree = "<group>"; };
+		78DBEAC71E41CBA300F26A31 /* UIViewController+Helper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "UIViewController+Helper.swift"; path = "Source/UIViewController+Helper.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,6 +137,7 @@
 				78617C381E3F434A00CEC368 /* Assets.xcassets */,
 				78617C3A1E3F434A00CEC368 /* LaunchScreen.storyboard */,
 				78617C3D1E3F434A00CEC368 /* Info.plist */,
+				78617C611E3F467D00CEC368 /* Source */,
 			);
 			path = SHRichTextEditor;
 			sourceTree = "<group>";
@@ -123,6 +158,54 @@
 				78617C531E3F434B00CEC368 /* Info.plist */,
 			);
 			path = SHRichTextEditorUITests;
+			sourceTree = "<group>";
+		};
+		78617C611E3F467D00CEC368 /* Source */ = {
+			isa = PBXGroup;
+			children = (
+				78DBEAB71E41C5CF00F26A31 /* Editor */,
+				78DBEAC91E41CF8E00F26A31 /* Helpers */,
+			);
+			name = Source;
+			sourceTree = "<group>";
+		};
+		78DBEAB71E41C5CF00F26A31 /* Editor */ = {
+			isa = PBXGroup;
+			children = (
+				78DBEABC1E41C8D400F26A31 /* ImagePicker */,
+				78DBEABD1E41C98600F26A31 /* CameraInputView.swift */,
+				78DBEABE1E41C98600F26A31 /* CameraInputView.xib */,
+				78DBEAB81E41C63E00F26A31 /* ImageBorderView.swift */,
+				78DBEAB91E41C63E00F26A31 /* ImageBorderView.xib */,
+				78617C621E3F46B100CEC368 /* ToolbarItem.swift */,
+				78DBEAB21E41BE7800F26A31 /* RichTextToolbar.xib */,
+				78DBEAB11E41BE7800F26A31 /* RichTextToolbar.swift */,
+				78617C5F1E3F44D800CEC368 /* SHRichTextEditor.swift */,
+			);
+			name = Editor;
+			sourceTree = "<group>";
+		};
+		78DBEABC1E41C8D400F26A31 /* ImagePicker */ = {
+			isa = PBXGroup;
+			children = (
+				78DBEAC11E41C9C100F26A31 /* ImagePickerManager.swift */,
+				78DBEAC21E41C9C100F26A31 /* OverlayView.swift */,
+				78DBEAC31E41C9C100F26A31 /* OverlayView.xib */,
+			);
+			name = ImagePicker;
+			sourceTree = "<group>";
+		};
+		78DBEAC91E41CF8E00F26A31 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				78DBEAC71E41CBA300F26A31 /* UIViewController+Helper.swift */,
+				78617C641E3F4BD100CEC368 /* NSAttributedString+Helper.swift */,
+				78DBEAA91E408EA600F26A31 /* UITextView+IndentationHelper.swift */,
+				78DBEAAB1E4091BB00F26A31 /* UITextView+ImageHelper.swift */,
+				78DBEAAD1E409A8C00F26A31 /* UITextView+LinkHelper.swift */,
+				78DBEAB51E41C0F900F26A31 /* UIFont+SymbolicTraits.swift */,
+			);
+			name = Helpers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -235,8 +318,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				78DBEAC61E41C9C100F26A31 /* OverlayView.xib in Resources */,
+				78DBEAC01E41C98600F26A31 /* CameraInputView.xib in Resources */,
 				78617C3C1E3F434A00CEC368 /* LaunchScreen.storyboard in Resources */,
 				78617C391E3F434A00CEC368 /* Assets.xcassets in Resources */,
+				78DBEABB1E41C63E00F26A31 /* ImageBorderView.xib in Resources */,
+				78DBEAB41E41BE7800F26A31 /* RichTextToolbar.xib in Resources */,
 				78617C371E3F434A00CEC368 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -262,8 +349,21 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				78DBEAAA1E408EA600F26A31 /* UITextView+IndentationHelper.swift in Sources */,
 				78617C341E3F434A00CEC368 /* ViewController.swift in Sources */,
+				78617C601E3F44D800CEC368 /* SHRichTextEditor.swift in Sources */,
+				78DBEAAC1E4091BB00F26A31 /* UITextView+ImageHelper.swift in Sources */,
+				78DBEAB31E41BE7800F26A31 /* RichTextToolbar.swift in Sources */,
+				78DBEABF1E41C98600F26A31 /* CameraInputView.swift in Sources */,
+				78DBEABA1E41C63E00F26A31 /* ImageBorderView.swift in Sources */,
+				78DBEAAE1E409A8C00F26A31 /* UITextView+LinkHelper.swift in Sources */,
+				78DBEAC51E41C9C100F26A31 /* OverlayView.swift in Sources */,
+				78DBEAC41E41C9C100F26A31 /* ImagePickerManager.swift in Sources */,
+				78DBEAC81E41CBA300F26A31 /* UIViewController+Helper.swift in Sources */,
+				78617C651E3F4BD100CEC368 /* NSAttributedString+Helper.swift in Sources */,
+				78617C631E3F46B100CEC368 /* ToolbarItem.swift in Sources */,
 				78617C321E3F434A00CEC368 /* AppDelegate.swift in Sources */,
+				78DBEAB61E41C0F900F26A31 /* UIFont+SymbolicTraits.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -514,6 +614,7 @@
 				78617C581E3F434B00CEC368 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		78617C591E3F434B00CEC368 /* Build configuration list for PBXNativeTarget "SHRichTextEditorTests" */ = {
 			isa = XCConfigurationList;
@@ -522,6 +623,7 @@
 				78617C5B1E3F434B00CEC368 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		78617C5C1E3F434B00CEC368 /* Build configuration list for PBXNativeTarget "SHRichTextEditorUITests" */ = {
 			isa = XCConfigurationList;
@@ -530,6 +632,7 @@
 				78617C5E1E3F434B00CEC368 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

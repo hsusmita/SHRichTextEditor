@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11762" systemVersion="16C67" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="OverlayView" customModule="DentalPlex" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ZuY-zr-dYF" userLabel="Top View">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="140"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="140" id="7hK-2u-SqK"/>
+                    </constraints>
+                </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="LRs-mX-3u8">
+                    <rect key="frame" x="0.0" y="140" width="375" height="375"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstAttribute="width" secondItem="LRs-mX-3u8" secondAttribute="height" id="muz-dd-OoV"/>
+                    </constraints>
+                </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ifw-dI-ROL" userLabel="Bottom View">
+                    <rect key="frame" x="0.0" y="515" width="375" height="152"/>
+                    <subviews>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Cwf-9n-PxS">
+                            <rect key="frame" x="150" y="39" width="75" height="75"/>
+                            <state key="normal" image="Camera-Click"/>
+                            <connections>
+                                <action selector="didTapClickButton:" destination="iN0-l3-epB" eventType="touchUpInside" id="QB2-UG-5GQ"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1za-TI-Zzy">
+                            <rect key="frame" x="50" y="63" width="27" height="27"/>
+                            <state key="normal" image="Camera-Cancel"/>
+                            <connections>
+                                <action selector="didTapCancelButton:" destination="iN0-l3-epB" eventType="touchUpInside" id="m1S-td-ecd"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstItem="1za-TI-Zzy" firstAttribute="centerY" secondItem="Cwf-9n-PxS" secondAttribute="centerY" id="2oS-84-3Xx"/>
+                        <constraint firstItem="Cwf-9n-PxS" firstAttribute="centerX" secondItem="ifw-dI-ROL" secondAttribute="centerX" id="ads-ZK-xED"/>
+                        <constraint firstItem="Cwf-9n-PxS" firstAttribute="centerY" secondItem="ifw-dI-ROL" secondAttribute="centerY" id="jnc-mS-ePd"/>
+                        <constraint firstItem="1za-TI-Zzy" firstAttribute="leading" secondItem="ifw-dI-ROL" secondAttribute="leading" constant="50" id="kNR-QZ-R0P"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="ZuY-zr-dYF" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="O7g-4U-iOI"/>
+                <constraint firstItem="LRs-mX-3u8" firstAttribute="width" secondItem="iN0-l3-epB" secondAttribute="width" id="X5w-de-gCm"/>
+                <constraint firstAttribute="trailing" secondItem="ZuY-zr-dYF" secondAttribute="trailing" id="YHJ-o2-rtM"/>
+                <constraint firstItem="LRs-mX-3u8" firstAttribute="bottom" secondItem="ifw-dI-ROL" secondAttribute="top" id="caA-HA-Udm"/>
+                <constraint firstItem="ZuY-zr-dYF" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="ftQ-Nc-bCL"/>
+                <constraint firstAttribute="bottom" secondItem="ifw-dI-ROL" secondAttribute="bottom" id="iqu-EK-vAZ"/>
+                <constraint firstAttribute="trailing" secondItem="ifw-dI-ROL" secondAttribute="trailing" id="oCg-an-ZrT"/>
+                <constraint firstItem="LRs-mX-3u8" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="sCS-7N-ez4"/>
+                <constraint firstItem="ifw-dI-ROL" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="uVF-6Z-tbL"/>
+                <constraint firstItem="LRs-mX-3u8" firstAttribute="top" secondItem="ZuY-zr-dYF" secondAttribute="bottom" id="xoq-88-Xub"/>
+            </constraints>
+        </view>
+    </objects>
+    <resources>
+        <image name="Camera-Cancel" width="27" height="27"/>
+        <image name="Camera-Click" width="75" height="75"/>
+    </resources>
+</document>

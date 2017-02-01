@@ -21,11 +21,22 @@ class SHRichTextEditorTests: XCTestCase {
         super.tearDown()
     }
     
-    func testExample() {
-        // This is an example of a functional test case.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
+    func testInitMethod() {
+		let textView = UITextView()
+		let _ = SHRichTextEditor(textView: textView)
+		if let view = textView.inputAccessoryView {
+			XCTAssert(view.isKind(of: UIToolbar.classForCoder()))
+		} else {
+			XCTAssert(false)
+		}
     }
-    
+	
+	func testInsertToolbarItem() {
+		let textView = UITextView()
+		let editor = SHRichTextEditor(textView: textView)
+		
+	}
+	
     func testPerformanceExample() {
         // This is an example of a performance test case.
         self.measure {
