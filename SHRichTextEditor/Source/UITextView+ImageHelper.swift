@@ -9,68 +9,30 @@
 import Foundation
 import UIKit
 
-typealias ImageFetchCompletionBlock = (UIImage?) ->()
-
-protocol ImageInputEnabled: class {
-	var imageFetcher: (@escaping ImageFetchCompletionBlock) -> () { get }
-	var imageSelectionView: UIView { get }
-}
-
 protocol ImageInsertProtocol {
-	var imageProvider: ImageInputEnabled? { get }
-	func insertImage(at index: Int)
-	func selectImage(at index: Int)
-	func deselectImage(at index: Int)
+	func insertImage(image: UIImage, at index: Int)
+	func selectImage(at index: Int, selectionView: UIView)
+	func deselectImage(at index: Int, selectionView: UIView)
 }
-
-private var imageProviderKey = "imageProviderKey"
 
 extension UITextView: ImageInsertProtocol {
 
-	var imageProvider: ImageInputEnabled? {
-		get {
-			return objc_getAssociatedObject(self, &imageProviderKey) as? ImageInputEnabled
-		}
-		set {
-			objc_setAssociatedObject(self, &imageProviderKey, newValue, .OBJC_ASSOCIATION_RETAIN)
-		}
+	func insertImage(image: UIImage, at index: Int) {
+		let oldWidth = image.size.width
+		let scaleFactor = oldWidth / (self.frame.size.width - 20)
+		self.attributedText = self.attributedText.insert(image, at: index, scaleFactor: scaleFactor)
 	}
 
-	func selectImage(at index: Int) {
-		guard let imageProvider = imageProvider else {
-			debugPrint("imageProvider is not set")
-			return
-		}
-
+	func selectImage(at index: Int, selectionView: UIView) {
 		let glyphRange: NSRange = layoutManager.range(ofNominallySpacedGlyphsContaining: index)
 		var textRect: CGRect = layoutManager.boundingRect(forGlyphRange: glyphRange, in: textContainer)
 		textRect.origin.x += textContainerInset.left
 		textRect.origin.y += textContainerInset.top
-		imageProvider.imageSelectionView.frame = textRect
-		addSubview(imageProvider.imageSelectionView)
+		selectionView.frame = textRect
+		addSubview(selectionView )
 	}
 	
-	func deselectImage(at index: Int) {
-		guard let imageProvider = imageProvider else {
-			debugPrint("imageProvider is not set")
-			return
-		}
-		imageProvider.imageSelectionView.removeFromSuperview()
-	}
-	
-	func insertImage(at index: Int) {
-		guard let imageProvider = imageProvider else {
-			debugPrint("imageProvider is not set")
-			return
-		}
-		imageProvider.imageFetcher { [unowned self] (image) in
-			guard let image = image else {
-				return
-			}
-			let oldWidth = image.size.width
-			let scaleFactor = oldWidth / (self.frame.size.width - 20)
-			self.attributedText = self.attributedText.insert(image, at: index, scaleFactor: scaleFactor)
-			self.selectImage(at: index)
-		}
+	func deselectImage(at index: Int, selectionView: UIView) {
+		selectionView.removeFromSuperview()
 	}
 }

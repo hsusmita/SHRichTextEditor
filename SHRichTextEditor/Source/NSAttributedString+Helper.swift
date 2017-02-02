@@ -10,6 +10,7 @@ import Foundation
 import UIKit
 
 extension NSAttributedString {
+	
 	func font(at index: Int) -> UIFont? {
 		var range: NSRange = NSRange()
 		guard index < length else {

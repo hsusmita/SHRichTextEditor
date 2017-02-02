@@ -10,12 +10,13 @@ import Foundation
 import UIKit
 
 class SHRichTextEditor: NSObject {
+	
 	internal let textView: UITextView
-	private var currentCharacterIndex: Int?
+	fileprivate var currentCharacterIndex: Int?
 	private let toolbar: RichTextToolbar = RichTextToolbar.toolbar()
 	fileprivate var imagePickerManager: ImagePickerManager?
-	fileprivate var imageBorderView = ImageBorderView.imageBorderView()
 	fileprivate var indentationOn: Bool = false
+	fileprivate var imageSelectionView = ImageBorderView.imageBorderView()
 	private var currentCursorPosition: Int? {
 		guard let selectedRange = textView.selectedTextRange else {
 			return nil
@@ -30,6 +31,32 @@ class SHRichTextEditor: NSObject {
 		return indentationOn && indentationRange == nil
 	}
 	
+	private var isImageInputMode: Bool = false {
+		didSet {
+			updateInputView()
+		}
+	}
+	
+	private var cameraInputView: CameraInputView {
+		self.imagePickerManager = ImagePickerManager(with: UIViewController.topMostController!)
+		let view = CameraInputView.cameraInputView()
+		view.actionOnCameraTap = { [unowned self] in
+			self.imagePickerManager?.showImagePicker(.camera, completion: { image in
+				if let image = image, let index = self.currentCursorPosition {
+					self.textView.insertImage(image: image, at: index)
+				}
+			})
+		}
+		view.actionOnLibraryTap = { [unowned self] in
+			self.imagePickerManager?.showImagePicker(.photoLibrary, completion: { image in
+				if let image = image, let index = self.currentCursorPosition {
+					self.textView.insertImage(image: image, at: index)
+				}
+			})
+		}
+		return view
+	}
+	
 	init(textView: UITextView) {
 		self.textView = textView
 		super.init()
@@ -37,40 +64,43 @@ class SHRichTextEditor: NSObject {
 	}
 	
 	private func configureTextView() {
-		textView.indentationStringProvider = self
-		textView.imageProvider = self
-		textView.linkInputProvider = self
 		configureGesture()
 		configureToolbar()
 		self.textView.delegate = self
 		self.textView.inputAccessoryView = toolbar
 	}
-
+	
 	private func configureToolbar() {
 		toolbar.setAction(for: .bullet, action: {
 			self.toggleIndentation()
 			self.updateStateOfToolbar()
+			self.isImageInputMode = false
 		})
 		toolbar.setAction(for: .bold, action: {
 			self.textView.toggleBoldface(self)
 			self.updateStateOfToolbar()
+			self.isImageInputMode = false
 		})
 		
 		toolbar.setAction(for: .italic, action: {
 			self.textView.toggleItalics(self)
 			self.updateStateOfToolbar()
+			self.isImageInputMode = false
 		})
 		
 		toolbar.setAction(for: .link, action: { [unowned self] in
-			self.textView.addLink(for: self.textView.selectedRange)
+			self.showLinkInputView(completion: { (url) in
+				if let url = url {
+					self.textView.addLink(link: url, for: self.textView.selectedRange)
+				}
+			})
 			self.updateStateOfToolbar()
+			self.isImageInputMode = false
 		})
 		
 		toolbar.setAction(for: .camera, action: { [unowned self] in
-			if let currentCursorPosition = self.currentCursorPosition {
-				self.textView.insertImage(at: currentCursorPosition)
-				self.updateStateOfToolbar()
-			}
+			self.updateStateOfToolbar()
+			self.isImageInputMode = true
 		})
 	}
 	
@@ -98,10 +128,15 @@ class SHRichTextEditor: NSObject {
 		toolbar.bulletButton.tintColor = indentationOn ? UIColor.blue : UIColor.gray
 		toolbar.linkButton.tintColor = textView.attributedText.linkPresent(at: cursorPosition) ? UIColor.blue : UIColor.gray
 		if let index = self.currentCharacterIndex {
-			toolbar.cameraButton.tintColor = textView.attributedText.imagePresent(at: index) ? UIColor.blue : UIColor.gray
+			toolbar.cameraButton.tintColor = textView.attributedText.imagePresent(at: index) || isImageInputMode ? UIColor.blue : UIColor.gray
 		}
 	}
-
+	
+	private func updateInputView() {
+		self.textView.inputView = isImageInputMode ? cameraInputView : nil
+		self.textView.reloadInputViews()
+	}
+	
 	private func configureGesture() {
 		let tap = UITapGestureRecognizer(target: self, action: #selector(handleTap(_:)))
 		tap.delegate = self
@@ -116,10 +151,11 @@ class SHRichTextEditor: NSObject {
 		
 		let characterIndex = layoutManager.characterIndex(for: location, in: textView.textContainer, fractionOfDistanceBetweenInsertionPoints: nil)
 		if characterIndex < textView.textStorage.length {
-			updateStateOfToolbar()
 			removeHighlightIfNeeded()
 			currentCharacterIndex = characterIndex
 			highlightIfNeeded()
+			updateStateOfToolbar()
+			isImageInputMode = textView.attributedText.imagePresent(at: characterIndex)
 		}
 	}
 	
@@ -128,7 +164,7 @@ class SHRichTextEditor: NSObject {
 			return
 		}
 		if textView.textStorage.imagePresent(at: currentCharacterIndex) {
-			imageBorderView.removeFromSuperview()
+			textView.deselectImage(at: currentCharacterIndex, selectionView: imageSelectionView)
 		}
 	}
 	
@@ -137,7 +173,7 @@ class SHRichTextEditor: NSObject {
 			return
 		}
 		if textView.textStorage.imagePresent(at: currentCharacterIndex) {
-			textView.selectImage(at: currentCharacterIndex)
+			textView.selectImage(at: currentCharacterIndex, selectionView: imageSelectionView)
 		}
 	}
 }
@@ -148,20 +184,12 @@ extension SHRichTextEditor: UIGestureRecognizerDelegate {
 	}
 }
 
-extension SHRichTextEditor: IndentationEnabled {
-	
-}
-
 extension SHRichTextEditor: LinkInputEnabled {
 	var linkAttributes: [String: Any] {
 		return [NSFontAttributeName: UIColor.green]
 	}
 	
-	var linkInfoFetcher: (@escaping LinkFetchCompletionBlock) -> () {
-		return showLinkInputView
-	}
-	
-	fileprivate func showLinkInputView(completion: @escaping LinkFetchCompletionBlock) {
+	fileprivate func showLinkInputView(completion: @escaping (URL?) -> ()) {
 		let alertController = UIAlertController(title: "Add a link", message: "", preferredStyle: .alert)
 		alertController.addTextField(configurationHandler: { textField in
 			textField.placeholder = "http://"
@@ -181,45 +209,12 @@ extension SHRichTextEditor: LinkInputEnabled {
 	}
 }
 
-extension SHRichTextEditor: ImageInputEnabled {
-	var imageFetcher: (@escaping ImageFetchCompletionBlock) -> () {
-		return showImageInputView
-	}
-	
-	func showImageInputView(completionBlock: @escaping ImageFetchCompletionBlock) {
-		self.imagePickerManager = ImagePickerManager(with: UIViewController.topMostController!)
-		let cameraInputView = CameraInputView.cameraInputView()
-		cameraInputView.actionOnCameraTap = { [unowned self] in
-			self.imagePickerManager?.showImagePicker(.camera, completion: { image in
-				if let image = image {
-					completionBlock(image)
-				}
-			})
-		}
-		cameraInputView.actionOnLibraryTap = { [unowned self] in
-			self.imagePickerManager?.showImagePicker(.photoLibrary, completion: { image in
-				if let image = image {
-					completionBlock(image)
-				}
-			})
-		}
-		textView.inputView = cameraInputView
-		textView.reloadInputViews()
-	}
-
-	var imageSelectionView: UIView {
-		return imageBorderView
-	}
-}
-
 extension SHRichTextEditor: UITextViewDelegate {
 	func textView(_ textView: UITextView, shouldChangeTextIn range: NSRange, replacementText text: String) -> Bool {
-		guard text == "\n" else {
+		guard text == "\n" && indentationOn else {
 			return true
 		}
-		if indentationOn {
-			textView.addIndentation(at: range.location)
-		}
+		textView.addIndentation(at: range.location)
 		return false
 	}
 }

@@ -25,32 +25,18 @@ extension IndentationEnabled {
 }
 
 protocol IndentationProtocol {
-	var indentationStringProvider: IndentationEnabled? { get }
 	func addIndentation(at index: Int)
 	func removeIndentation(at index: Int)
 }
 
-private var indentationStringProviderKey = "indentationStringProviderKey"
+extension UITextView: IndentationEnabled {}
 
 extension UITextView: IndentationProtocol {
 	
-	var indentationStringProvider: IndentationEnabled? {
-		get {
-			return objc_getAssociatedObject(self, &indentationStringProviderKey) as? IndentationEnabled
-		}
-		set {
-			objc_setAssociatedObject(self, &indentationStringProviderKey, newValue, .OBJC_ASSOCIATION_RETAIN)
-		}
-	}
-	
 	func addIndentation(at index: Int) {
-		guard let indentationStringProvider = indentationStringProvider else {
-			debugPrint("indentationStringProvider is not set")
-			return
-		}
 		let contentOffset = self.contentOffset
 		let selectedRange = selectedTextRange
-		let attributedStringToAppend: NSMutableAttributedString = NSMutableAttributedString(string: indentationStringProvider.indentationString)
+		let attributedStringToAppend: NSMutableAttributedString = NSMutableAttributedString(string: indentationString)
 		attributedStringToAppend.addAttribute(NSFontAttributeName,
 		                                      value: self.attributedText.font(at: index) ?? font!,
 		                                      range: NSRange(location: 0, length: attributedStringToAppend.length))
@@ -66,10 +52,6 @@ extension UITextView: IndentationProtocol {
 	}
 	
 	func removeIndentation(at index: Int) {
-		guard let indentationStringProvider = indentationStringProvider else {
-			debugPrint("indentationStringProvider is not set")
-			return
-		}
 		guard let range = indentationRange(at: index) else {
 			return
 		}
@@ -78,18 +60,13 @@ extension UITextView: IndentationProtocol {
 		updatedText.replaceCharacters(in: range, with: "")
 		attributedText = updatedText
 		if let currentSelectedRange = selectedRange {
-			let start = position(from: currentSelectedRange.start, offset: -indentationStringProvider.indentationString.characters.count)
-			let end = position(from: currentSelectedRange.end, offset: -indentationStringProvider.indentationString.characters.count)
+			let start = position(from: currentSelectedRange.start, offset: -indentationString.characters.count)
+			let end = position(from: currentSelectedRange.end, offset: -indentationString.characters.count)
 			selectedTextRange = textRange(from: start!, to: end!)
 		}
 	}
 	
 	func indentationRange(at index: Int) -> NSRange? {
-		guard let indentationStringProvider = indentationStringProvider else {
-			debugPrint("indentationStringProvider is not set")
-			return nil
-		}
-
 		guard index < text.characters.count else {
 			return nil
 		}
@@ -99,11 +76,11 @@ extension UITextView: IndentationProtocol {
 			return nil
 		}
 		let rangeOfText = (text as NSString).substring(with: lineRange)
-		let indentationRange = (rangeOfText as NSString).range(of: indentationStringProvider.indentationStringWithoutNewline)
+		let indentationRange = (rangeOfText as NSString).range(of: indentationStringWithoutNewline)
 		if indentationRange.length == 0 {
 			return nil
 		} else {
-			return NSRange(location: lineRange.location - 1, length: indentationStringProvider.indentationString.characters.count)
+			return NSRange(location: lineRange.location - 1, length: indentationString.characters.count)
 		}
 	}
 }

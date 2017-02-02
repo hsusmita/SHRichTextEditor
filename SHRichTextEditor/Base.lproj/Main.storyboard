@@ -21,52 +21,79 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="rI0-VW-ymU">
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" usesAttributedText="YES" translatesAutoresizingMaskIntoConstraints="NO" id="rI0-VW-ymU">
                                 <rect key="frame" x="0.0" y="20" width="375" height="128"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="128" id="q1x-VH-ljC"/>
                                 </constraints>
-                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <attributedString key="attributedText">
+                                    <fragment>
+                                        <mutableString key="content">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</mutableString>
+                                        <attributes>
+                                            <font key="NSFont" size="13" name="Roboto-Regular"/>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8cv-pm-gpV">
+                                <rect key="frame" x="164.5" y="318.5" width="46" height="30"/>
+                                <state key="normal" title="Button"/>
+                                <connections>
+                                    <action selector="didTapDone:" destination="BYZ-38-t0r" eventType="touchUpInside" id="7HR-HZ-gMF"/>
+                                    <segue destination="mrn-Rf-fjP" kind="showDetail" identifier="TextViewSegue" id="Ovw-la-g2e"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
+                            <constraint firstItem="8cv-pm-gpV" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="4Ud-Yh-kRd"/>
                             <constraint firstItem="rI0-VW-ymU" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="7Xb-vJ-hlC"/>
                             <constraint firstAttribute="trailing" secondItem="rI0-VW-ymU" secondAttribute="trailing" id="GPE-lj-dM2"/>
                             <constraint firstItem="rI0-VW-ymU" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="HnL-Wc-l1b"/>
+                            <constraint firstItem="8cv-pm-gpV" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Y8Q-RZ-00W"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="textView" destination="rI0-VW-ymU" id="WCA-OQ-3Gi"/>
-                        <outlet property="toolbar" destination="D0r-Cz-psA" id="o8T-Jg-p3r"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
-                <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="D0r-Cz-psA">
-                    <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
-                    <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
-                    <items>
-                        <barButtonItem title="Indent" id="GiO-Tb-IeC">
-                            <connections>
-                                <action selector="handleIndentButtonTapped:" destination="BYZ-38-t0r" id="bNi-nb-0HD"/>
-                            </connections>
-                        </barButtonItem>
-                        <barButtonItem title="Image" id="l57-OZ-daJ" userLabel="Image">
-                            <connections>
-                                <action selector="handleImageButtonTapped:" destination="BYZ-38-t0r" id="6Fd-jZ-FLj"/>
-                            </connections>
-                        </barButtonItem>
-                        <barButtonItem title="Link" id="G7Z-3P-UWJ">
-                            <connections>
-                                <action selector="handleLinkButtonTapped:" destination="BYZ-38-t0r" id="grA-eu-MjB"/>
-                            </connections>
-                        </barButtonItem>
-                    </items>
-                </toolbar>
             </objects>
+        </scene>
+        <!--Text View Controller-->
+        <scene sceneID="cxz-ce-9Af">
+            <objects>
+                <viewController id="mrn-Rf-fjP" customClass="TextViewController" customModule="SHRichTextEditor" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="JjQ-zO-Szs"/>
+                        <viewControllerLayoutGuide type="bottom" id="aJo-iv-EFp"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Sea-m9-9jn">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="PHM-4k-ZYt">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </webView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="PHM-4k-ZYt" secondAttribute="trailing" id="FPM-Ph-uNk"/>
+                            <constraint firstItem="PHM-4k-ZYt" firstAttribute="leading" secondItem="Sea-m9-9jn" secondAttribute="leading" id="LoB-P7-iUi"/>
+                            <constraint firstItem="PHM-4k-ZYt" firstAttribute="top" secondItem="Sea-m9-9jn" secondAttribute="top" id="kEN-qu-PyB"/>
+                            <constraint firstItem="aJo-iv-EFp" firstAttribute="top" secondItem="PHM-4k-ZYt" secondAttribute="bottom" id="uIi-JR-eJp"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="webView" destination="PHM-4k-ZYt" id="wbd-QS-8hi"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="jHe-aH-6C6" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1095" y="103"/>
         </scene>
     </scenes>
 </document>

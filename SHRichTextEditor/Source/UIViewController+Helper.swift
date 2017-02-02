@@ -16,9 +16,7 @@ extension UIViewController {
 		guard let window = UIApplication.shared.keyWindow else {
 			return nil
 		}
-		
 		topController = window.rootViewController
-		
 		repeat {
 			if let newTopController = topController {
 				switch newTopController {
