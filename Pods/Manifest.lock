@@ -1,0 +1,12 @@
+PODS:
+  - SwiftSoup (1.1.7)
+
+DEPENDENCIES:
+  - SwiftSoup
+
+SPEC CHECKSUMS:
+  SwiftSoup: ad2b920e7900a9c057dc7ec899e3423ddec59cb7
+
+PODFILE CHECKSUM: 046d7a2b4fd848ceead08c152dab04f09dd24b35
+
+COCOAPODS: 1.1.1

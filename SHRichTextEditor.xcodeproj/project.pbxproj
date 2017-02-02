@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		422E398D886B1F05D1594E33 /* Pods_SHRichTextEditor.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E6569B139C639448B5A9779C /* Pods_SHRichTextEditor.framework */; };
+		7841BCA21E4210D400AF3767 /* TextViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7841BCA11E4210D400AF3767 /* TextViewController.swift */; };
 		78617C321E3F434A00CEC368 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78617C311E3F434A00CEC368 /* AppDelegate.swift */; };
 		78617C341E3F434A00CEC368 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78617C331E3F434A00CEC368 /* ViewController.swift */; };
 		78617C371E3F434A00CEC368 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 78617C351E3F434A00CEC368 /* Main.storyboard */; };
@@ -51,6 +53,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		2E3F004A73020F64AFCF274A /* Pods-SHRichTextEditor.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SHRichTextEditor.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SHRichTextEditor/Pods-SHRichTextEditor.debug.xcconfig"; sourceTree = "<group>"; };
+		7841BCA11E4210D400AF3767 /* TextViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TextViewController.swift; sourceTree = "<group>"; };
 		78617C2E1E3F434A00CEC368 /* SHRichTextEditor.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SHRichTextEditor.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		78617C311E3F434A00CEC368 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		78617C331E3F434A00CEC368 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -81,6 +85,8 @@
 		78DBEAC21E41C9C100F26A31 /* OverlayView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = OverlayView.swift; path = Source/ImagePickerManager/OverlayView.swift; sourceTree = "<group>"; };
 		78DBEAC31E41C9C100F26A31 /* OverlayView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = OverlayView.xib; path = Source/ImagePickerManager/OverlayView.xib; sourceTree = "<group>"; };
 		78DBEAC71E41CBA300F26A31 /* UIViewController+Helper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "UIViewController+Helper.swift"; path = "Source/UIViewController+Helper.swift"; sourceTree = "<group>"; };
+		7B68DD5D2F866F6C797F0C0A /* Pods-SHRichTextEditor.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SHRichTextEditor.release.xcconfig"; path = "Pods/Target Support Files/Pods-SHRichTextEditor/Pods-SHRichTextEditor.release.xcconfig"; sourceTree = "<group>"; };
+		E6569B139C639448B5A9779C /* Pods_SHRichTextEditor.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SHRichTextEditor.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -88,6 +94,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				422E398D886B1F05D1594E33 /* Pods_SHRichTextEditor.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -108,6 +115,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		08975C86670BCBC7B720DCB5 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				E6569B139C639448B5A9779C /* Pods_SHRichTextEditor.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		78617C251E3F434A00CEC368 = {
 			isa = PBXGroup;
 			children = (
@@ -115,6 +130,8 @@
 				78617C451E3F434B00CEC368 /* SHRichTextEditorTests */,
 				78617C501E3F434B00CEC368 /* SHRichTextEditorUITests */,
 				78617C2F1E3F434A00CEC368 /* Products */,
+				978B1E98312FAC331306DFDB /* Pods */,
+				08975C86670BCBC7B720DCB5 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -132,6 +149,7 @@
 			isa = PBXGroup;
 			children = (
 				78617C311E3F434A00CEC368 /* AppDelegate.swift */,
+				7841BCA11E4210D400AF3767 /* TextViewController.swift */,
 				78617C331E3F434A00CEC368 /* ViewController.swift */,
 				78617C351E3F434A00CEC368 /* Main.storyboard */,
 				78617C381E3F434A00CEC368 /* Assets.xcassets */,
@@ -208,6 +226,15 @@
 			name = Helpers;
 			sourceTree = "<group>";
 		};
+		978B1E98312FAC331306DFDB /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				2E3F004A73020F64AFCF274A /* Pods-SHRichTextEditor.debug.xcconfig */,
+				7B68DD5D2F866F6C797F0C0A /* Pods-SHRichTextEditor.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -215,9 +242,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 78617C561E3F434B00CEC368 /* Build configuration list for PBXNativeTarget "SHRichTextEditor" */;
 			buildPhases = (
+				013522C0E18AD7678DF00490 /* [CP] Check Pods Manifest.lock */,
 				78617C2A1E3F434A00CEC368 /* Sources */,
 				78617C2B1E3F434A00CEC368 /* Frameworks */,
 				78617C2C1E3F434A00CEC368 /* Resources */,
+				EA79710D663BC71260E8EBF5 /* [CP] Embed Pods Frameworks */,
+				F7C6600C50B876F2D6007257 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -344,6 +374,54 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		013522C0E18AD7678DF00490 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		EA79710D663BC71260E8EBF5 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SHRichTextEditor/Pods-SHRichTextEditor-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F7C6600C50B876F2D6007257 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SHRichTextEditor/Pods-SHRichTextEditor-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		78617C2A1E3F434A00CEC368 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -356,6 +434,7 @@
 				78DBEAB31E41BE7800F26A31 /* RichTextToolbar.swift in Sources */,
 				78DBEABF1E41C98600F26A31 /* CameraInputView.swift in Sources */,
 				78DBEABA1E41C63E00F26A31 /* ImageBorderView.swift in Sources */,
+				7841BCA21E4210D400AF3767 /* TextViewController.swift in Sources */,
 				78DBEAAE1E409A8C00F26A31 /* UITextView+LinkHelper.swift in Sources */,
 				78DBEAC51E41C9C100F26A31 /* OverlayView.swift in Sources */,
 				78DBEAC41E41C9C100F26A31 /* ImagePickerManager.swift in Sources */,
@@ -513,6 +592,7 @@
 		};
 		78617C571E3F434B00CEC368 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2E3F004A73020F64AFCF274A /* Pods-SHRichTextEditor.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = HP3Q6K3LF3;
@@ -526,6 +606,7 @@
 		};
 		78617C581E3F434B00CEC368 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7B68DD5D2F866F6C797F0C0A /* Pods-SHRichTextEditor.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = HP3Q6K3LF3;
